@@ -23,7 +23,8 @@ router.post('/new', [
 
 router.post('/', [
     check('password','La contraseña es obligatoria').not().isEmpty(),
-    check('email','El correo es obligatorio').isEmail(),
+    // check('email','El correo es obligatorio').isEmail(),
+    check('email','El correo es obligatorio').isEmpty(),
 ], login );
 
 
