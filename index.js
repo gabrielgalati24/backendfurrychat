@@ -34,18 +34,18 @@ app.use( '/api/mensajes', require('./routes/mensajes') );
 
 
 
-server.listen( 4000, ( err ) => {
-
-    if ( err ) throw new Error(err);
-
-    console.log('Servidor corriendo en puerto', 4000 );
-
-});
-
-// server.listen( process.env.PORT, ( err ) => {
+// server.listen( 4000, ( err ) => {
 
 //     if ( err ) throw new Error(err);
 
-//     console.log('Servidor corriendo en puerto', process.env.PORT );
+//     console.log('Servidor corriendo en puerto', 4000 );
 
 // });
+
+server.listen( process.env.PORT, ( err ) => {
+
+    if ( err ) throw new Error(err);
+
+    console.log('Servidor corriendo en puerto', process.env.PORT );
+
+});
