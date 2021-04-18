@@ -18,6 +18,7 @@ console.log("conectado nuevo")
 
     // Escuchar del cliente el mensaje-personal
     client.on('mensaje-personal', async( payload ) => {
+        console.log("entrandoa  la nueva sala")
         // TODO: Grabar mensaje
         await grabarMensaje( payload );
         io.to( payload.para ).emit('mensaje-personal', payload );
